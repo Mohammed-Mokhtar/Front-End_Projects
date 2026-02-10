@@ -1,0 +1,461 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+}
+
+p {
+  margin: 0;
+}
+
+html {
+  /* font-size: 62.5%; */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+h1 {
+  /* font-size: 30px; */
+  /* font-weight: 600; */
+  color: #112344;
+}
+
+.nav-link {
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .nav-link::before {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #175cdd;
+    position: absolute;
+    top: 100%;
+    left: 8px;
+    transition: all 0.3s;
+  }
+  .nav-link:hover::before,
+  .nav-link.active:before {
+    width: calc(100% - 16px);
+  }
+
+  .nav-link:hover {
+    color: #175cdd;
+  }
+}
+
+.navbar-nav .nav-link.active {
+  color: #175cdd;
+}
+
+/* ****************************************************** */
+/* HERO SECTION */
+/* ***************************************************** */
+
+.section-hero {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding-bottom: 3.75rem;
+  background: (
+    135deg,
+    #fff 0%,
+    color-mix(in srgb, #175cdd, transparent 95%) 100%
+  );
+}
+.section-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../images/abstract-bg-3.webp) center / cover;
+  opacity: 0.08;
+  z-index: -1;
+}
+
+.hero-bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: color-mix(in srgb, #175cdd, transparent 90%);
+  z-index: -1;
+  animation: moving-bubble 10s infinite;
+}
+
+.bubble-1 {
+  width: 200px;
+  height: 200px;
+  top: 0%;
+  left: 48%;
+}
+
+.bubble-2 {
+  width: 150px;
+  height: 150px;
+  top: 40%;
+  left: 48%;
+  animation-delay: 2s;
+}
+
+.bubble-3 {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  right: 5%;
+  animation-delay: 4s;
+}
+
+@keyframes moving-bubble {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.trust-badge {
+  gap: 1.5rem;
+}
+
+.hero-badge {
+  background: color-mix(in srgb, #175cdd, transparent 90%);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  color: #175cdd;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+}
+
+.hero-badge span {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.hero-badge ion-icon {
+  color: #175cdd;
+  font-size: 1.2rem;
+  padding-bottom: 0.1rem;
+}
+
+.heading-secondary {
+  font-size: 3.8rem;
+  font-weight: 700;
+  margin: 1.5rem 0;
+  color: #112344;
+}
+.hero-description {
+  color: #112344;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+.stat p {
+  color: #175cdd;
+  font-weight: 700;
+}
+.stat span {
+  color: #75787e;
+  font-weight: 500;
+}
+
+.hero-btn {
+  transition: all 0.3s;
+}
+.hero-btn:hover {
+  transform: translateY(-3%);
+}
+
+.floating-card {
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-width: 12.5rem;
+  padding: 1.5rem;
+}
+
+.floating-card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.floating-card-content ion-icon {
+  background: color-mix(in srgb, #175cdd, transparent 90%);
+  padding: 1rem;
+}
+
+.floating-card-text p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.floating-card-text span {
+  font-size: 0.75rem;
+}
+.floating-rating {
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* gap: 1rem; */
+  min-width: 6rem;
+  padding: 1.5rem 1rem;
+}
+
+.floating-rating span {
+  font-size: 0.7rem;
+}
+
+/* ****************************************************** */
+/* About SECTION */
+/* ***************************************************** */
+
+.section-about {
+  padding-bottom: 3.75rem;
+}
+
+.floating-card.floating-about {
+  right: -10px;
+  /* width: auto; */
+  padding: 1.5rem;
+  gap: 0;
+}
+
+.floating-card.floating-about span {
+  font-size: 12px;
+}
+
+.floating-rating.floating-emergency {
+  left: -10px;
+}
+
+/* ****************************************************** */
+/* Featured SECTION */
+/* ***************************************************** */
+
+.featured-heading {
+  position: relative;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.featured-heading::before {
+  content: "";
+  width: 15%;
+  height: 1px;
+  background-color: #b1b3b6;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  /* transform: translateX(-50%); */
+}
+.featured-heading::after {
+  content: "";
+  width: 5%;
+  height: 3px;
+  background-color: #175cdd;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  /* transform: translateX(-50%); */
+  /* z-index: 3; */
+}
+
+.specialty-visuals {
+  height: 250px;
+  overflow: hidden;
+}
+
+.specialty-visuals img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s ease;
+}
+
+.card {
+  transition: 0.4s all ease;
+}
+
+.section-featured-card {
+  border: 1px solid rgba(23, 92, 221, 0.25);
+}
+
+.section-featured-card:hover {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  transform: translateY(-10px);
+  border-color: #175cdd;
+}
+
+.section-featured-card:hover img {
+  scale: 1.1;
+}
+
+.card-icon {
+  width: 75px;
+  height: 75px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-2:hover {
+  border-color: #175cdd;
+  /* border-width: 1px; */
+}
+
+/* ****************************************************** */
+/* Featured Services SECTION */
+/* ***************************************************** */
+
+.image-wrapper {
+  height: 400px;
+}
+
+.image-wrapper img {
+  transition: 0.3s all;
+}
+
+.image-wrapper:hover img {
+  scale: 1.1;
+}
+
+.overlay {
+  background-image: linear-gradient(
+    135deg,
+    color-mix(in srgb, #175cdd, transparent 20%) 0%,
+    transparent 70%
+  );
+}
+
+.badge {
+  background-color: #fff;
+  color: #000;
+  top: 20px;
+  left: 20px;
+}
+
+.badge ion-icon {
+  color: #175cdd;
+  font-size: 1.2rem;
+}
+
+.badge p {
+  color: #112344;
+  font-weight: 700;
+}
+
+.feature-item-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: color-mix(in srgb, #175cdd, transparent 90%);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.specialty-card-img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  /* background-color: blue; */
+  overflow: hidden;
+}
+
+.specialty-card-img img {
+  transition: 0.4s all;
+}
+
+.specialty-card:hover img {
+  scale: 1.1;
+}
+
+.specialty-card {
+  transition: all 0.3s;
+}
+
+.specialty-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ****************************************************** */
+/* FIND A DOCTOR SECTION */
+/* ***************************************************** */
+
+.no-caret::after {
+  display: none !important;
+}
+
+.doctor-img {
+  height: 8rem;
+  width: 8rem;
+  position: relative;
+}
+
+.doctor-img::after {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #10b981;
+  border: 5px #fff solid;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  /* z-index: 3; */
+}
+
+.doctor-card {
+  border: 1px solid #0d6dfd0c;
+}
+
+.doctor-card:hover {
+  border-color: #0d6efd;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+/* ****************************************************** */
+/* CTA SECTION */
+/* ***************************************************** */
+
+.section-cta {
+  background-color: #f4f8ff;
+}
+
+.emergency-services {
+  background-color: #e9f0fd;
+}
+
+/* ****************************************************** */
+/* FOOTER SECTION */
+/* ***************************************************** */
+
+.footer-info p {
+  font-size: 0.8rem;
+}
