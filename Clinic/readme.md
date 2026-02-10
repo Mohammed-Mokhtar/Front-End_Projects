@@ -2,6 +2,8 @@
 
 A professional, responsive, and high-performance landing page for a medical clinic. This project showcases modern UI/UX principles, smooth animations, and a clean layout designed to build trust with patients.
 
+## 🚀 Live Demo
+https://clinic-mokhtar.netlify.app/
 
 ---
 
